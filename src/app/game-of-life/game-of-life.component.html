@@ -1,0 +1,15 @@
+<div class="gom-wrapper">
+  <h1 class="gom__title">Game of life</h1>
+  <div class="gom__content">
+    <div *ngFor="let cell of game.cells" class="item" (click)="toggleCell(cell, cellColor)">
+      <div class="cell" [ngClass]="{dead: !cell.alive, alive: cell.alive}"></div>
+    </div>
+  </div>
+  <div class="gom__tools">
+    <button class="button" (click)="toggleGame()">{{ gameRunning ? 'Stop' : 'Start'}}</button>
+    <button class="button" (click)="increasSpeed()">Increase speed</button>
+    <button class="button" (click)="decreaseSpeed()">Descrease speed</button>
+    Speed: {{ intervalTime }}
+    <h2>Generation: {{ game.generation }}</h2>
+  </div>
+</div>

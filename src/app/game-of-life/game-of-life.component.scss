@@ -1,0 +1,74 @@
+.gom-wrapper {
+
+}
+
+.gom__title {
+  text-align: center;
+  color: #ff7f50;
+  font-size: 4em;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.gom__content {
+  padding: 0;
+  margin: 0 auto;
+  width: 800px;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+}
+
+.gom__tools {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.item {
+  width: 20px;
+  height: 20px;
+  border-left: 1px solid;
+  border-top: 1px solid;
+
+  &:nth-child(40n) {
+    border-right: 1px solid;
+  }
+
+  &:nth-child(n+1561) {
+    border-bottom: 1px solid;
+  }
+
+  &:hover .alive {
+    background-color: #5eb75e;
+    color: #5eb75e;
+  }
+
+  &:hover .dead {
+    background-color: #5eb75e;
+    color: #5eb75e;
+  }
+}
+
+.alive {
+  background-color: green;
+  color: green;
+}
+
+.dead {
+  background-color: white;
+  color: white;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+}
+
+.cell:before {
+  content: 'a';
+}
